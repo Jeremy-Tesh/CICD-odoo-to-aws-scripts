@@ -1,0 +1,14 @@
+version:0.0
+os:linux
+files:
+  - source: /
+    destination: /path/to/odoo/onyouraws
+
+hooks:
+  BeforeInstall:
+    - location: scripts/before_install.sh
+      timeout: 500
+  Afternstall: 
+    - location: scripts/after_install.sh
+      timeout: 500
+      runas: root
